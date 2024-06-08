@@ -16,6 +16,7 @@ export interface IUserCreate {
   lastName: string;
   Team?: ITeam;
   rol: ROL;
+  image: string;
 }
 
 export type IUser = IUserCreate & Document;
@@ -60,6 +61,10 @@ const userSchema = new Schema<IUserCreate>(
       type: String,
       required: true,
       enum: ROL,
+    },
+    image: {
+      type: String,
+      required: true,
     },
   },
   {

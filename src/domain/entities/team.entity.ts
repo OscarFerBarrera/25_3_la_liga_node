@@ -3,6 +3,7 @@ import { Document, Schema, model } from "mongoose";
 export interface ITeamCreate {
   name: string;
   logo: string;
+  acronym: string;
 }
 
 export type ITeam = ITeamCreate & Document;
@@ -13,11 +14,18 @@ const teamSchema = new Schema<ITeamCreate>({
     trim: true,
     required: true,
     unique: true,
-    minlength: [5, "El nombre de la clase debe tener al menos 5 caracteres, por ejemplo 2 ESO, 1 BACH... etc"]
+    minlength: [5, "El nombre del equipo debe tener al menos 5 caracteres"]
   },
   logo: {
     type: String,
-    required: false,
+    required: true,
+  },
+  acronym: {
+    type: String,
+    trim: true,
+    unique: true,
+    minlength: [3, "El minimo debe ser de 3 caracteres"],
+    maxlength: [5, "el máximo debe ser de 5 caracteres."],
   },
 }, {
   timestamps: true,
