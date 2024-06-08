@@ -1,0 +1,3 @@
+DB_URL = "mongodb+srv://osjamfer:jBOZEMizPGChFKdA@cluster-osk.kui2qyo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-Osk"
+DB_NAME = "DEVELOPMENT-LA_LIGA"
+JWT_SECRET ="NODE-BOOTCAMP-LA-LIGA"
