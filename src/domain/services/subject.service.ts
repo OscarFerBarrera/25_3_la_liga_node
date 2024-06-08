@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { subjectOdm } from "../odm/subject.odm";
+import { subjectOdm } from "../odm/match.odm";
 
 export const getSubjects = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {

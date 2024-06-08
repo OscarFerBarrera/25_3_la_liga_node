@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { teamOdm } from "../odm/team.odm";
 import { userOdm } from "../odm/user.odm";
-import { subjectOdm } from "../odm/subject.odm";
+import { subjectOdm } from "../odm/match.odm";
 
 export const getClassrooms = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {

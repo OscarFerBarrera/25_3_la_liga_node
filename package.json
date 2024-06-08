@@ -1,5 +1,5 @@
 {
-  "name": "bootcamp-school-management-solution",
+  "name": "bootcamp-la_liga",
   "version": "1.0.0",
   "description": "Node bootcamp",
   "main": "src/index.ts",
@@ -8,8 +8,8 @@
     "start": "ts-node-dev ./src/index.ts",
     "start:pro": "node ./dist/index.js",
     "build": "tsc",
-    "test:verbose": "cross-env DB_NAME=NODE-BOOTCAMP-TESTING jest",
-    "test": "cross-env DB_NAME=NODE-BOOTCAMP-TESTING jest --silent",
+    "test:verbose": "cross-env DEVELOPMENT-LA_LIGA jest",
+    "test": "cross-env DEVELOPMENT-LA_LIGA jest --silent",
     "prepare": "husky install",
     "precommit": "npm run lint && npm run test && npm run build"
   },
@@ -17,7 +17,7 @@
     "node",
     "express"
   ],
-  "author": "Fran Linde",
+  "author": "Oscar Barrera",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
